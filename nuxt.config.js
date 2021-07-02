@@ -16,6 +16,12 @@ export default {
     ]
   },
 
+  publicRuntimeConfig:{
+    axios: {
+      baseURL: 'https://pokeapi.co/api/v2/'
+    }
+  },
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
@@ -44,9 +50,5 @@ export default {
 
   tailwindcss: {
     viewer: false
-  },
-
-  axios: {
-    baseURL: 'https://pokeapi.co/api/v2/'
   }
 }
