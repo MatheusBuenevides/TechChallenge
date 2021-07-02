@@ -1,0 +1,43 @@
+.btn{
+    display: block;
+    text-decoration: none;
+    padding: 10px 35px;
+    color: #f6bd20;
+    border: solid 2px #f6bd20;
+    font-size: 18px;
+    font-weight: bold;
+
+    position: relative;
+    overflow: hidden;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+
+        background-color: #f6bd20;
+
+        z-index: -1;
+
+        transition: .4s ease;
+    }
+}
+
+
+.btn-primary{
+
+    &:before{
+        width: 0%;
+        height: 100%;
+    }
+
+    &:hover{
+        color: #376978;
+        &::before{
+            width: 100%;
+        }
+    }
+}

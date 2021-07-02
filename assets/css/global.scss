@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~assets/fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~assets/fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~assets/fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('~assets/fonts/Ubuntu-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+body{
+  background-color: #376978;
+  font-family: Ubuntu;
+}
+
+
+.pageTitle{
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+
+}
