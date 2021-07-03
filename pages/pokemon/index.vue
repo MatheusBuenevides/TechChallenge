@@ -21,7 +21,6 @@
     max-width: 250px;
   }
   .name{
-    color: white;
     text-transform: capitalize;
     font-size: 20px;
   }
