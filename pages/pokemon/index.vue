@@ -1,28 +1,47 @@
 <template>
-  <div class="flex items-center flex-col h-screen justify-center gap-5">
+  <div class="flex">
 
-    <h1 class="pageTitle">Olá!</h1>
-
-    <ul v-for="item in data" :key="item.name">
+    <div class="flex items-left flex-col justify-left gap-5 w-6/12">
+      <ul v-for="(item, index) in result" :key="item.name">
         <li>
-            {{item.name}}
+            <button v-on:click="loadPokemon(index+1)">{{item.name}}</button>
         </li>
-    </ul>
-    
-    
+      </ul>
+    </div>
+
+
+
+
+
+    <div class="w-6/12 max-h-screen overflow-y-auto">
+      <ul v-for="item in pokemon.moves" :key="item.name">
+        <li>
+            {{item.move.name}}
+        </li>
+      </ul>
+    </div>
   </div>
 
 </template>
 
-<script>
+
+<script>  
 export default {
-
+  data(){
+    return{
+      pokemon: []
+    }
+  },
   async asyncData({ $axios }) {
-    const data = (await $axios.$get('/pokemon/')).results
-    return { data }
+    const result = (await $axios.$get('/pokemon/')).results
+    return { result }
 
+  },
+  methods:{
+    async loadPokemon(id){
+      let pokemon = await this.$axios.$get('https://pokeapi.co/api/v2/pokemon/'+id);
+      this.pokemon = pokemon
+    }
   }
-
-
 }
 </script>
