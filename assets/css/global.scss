@@ -47,7 +47,7 @@ body{
 }
 
 // Scroollbar style
-.overflow-y-auto{
+.overflow-y-auto, .scroollbar{
   &::-webkit-scrollbar{
     width: 5px;
   }

@@ -1,8 +1,8 @@
 <template>
-  <div class="flex p-5">
-    <div class="flex items-left flex-col justify-left gap-5 w-6/12">
+  <div class="flex pl-5">
+    <div class="itemsContent flex items-left flex-col justify-left gap-5 w-6/12 scroollbar">
       <ul v-for="(item, index) in result" :key="item.name">
-        <li class="flex gap-5 items-center justify-between">
+        <li class="items flex gap-5 items-center justify-between">
             <p class="name">{{item.name}}</p>
             <button class="btn btn-primary" v-on:click="loadPokemon(index+1)">Ver</button>
         </li>
@@ -24,6 +24,23 @@
     text-transform: capitalize;
     font-size: 20px;
   }
+  .itemsContent{
+
+    @media(max-width: 992px) {
+      max-height: 100vh;
+      overflow-y: auto;
+    }
+    .items{
+      @media(max-width: 992px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 5px;
+      }
+    }
+
+  }
+  
 </style>
 
 <script>  

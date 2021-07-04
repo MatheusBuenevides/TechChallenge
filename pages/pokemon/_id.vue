@@ -1,15 +1,15 @@
 <template>
 
     <div>
-        <div class="flex justify-between mr-5 items-center">
+        <div class="flex justify-between items-center">
             <img v-bind:src="pokemon.img">
             <h1 class="pageTitle">{{pokemon.name}}</h1>
             <nuxt-link :to="`/pokemon`" class="btn btn-primary">
                 Voltar
             </nuxt-link>
         </div>
-        <div class="flex gap-10">
-            <div class="items w-1/3 pl-3">
+        <div class="flex gap-10 itemsContent">
+            <div class="items pl-3">
                 <h3 class="mb-5">Abilidades</h3>
                 <ul>
                     <li v-for="item in pokemon.abilities" :key="item.name">
@@ -18,7 +18,7 @@
                 </ul>
             </div>
 
-            <div class="items w-1/3 pl-3">
+            <div class="items pl-3">
                 <h3 class="mb-5">Movimentos</h3>
                 <ul class="h-40 overflow-y-auto">
                     <li v-for="item in pokemon.moves" :key="item.name">
@@ -27,7 +27,7 @@
                 </ul>
             </div>
 
-            <div class="items w-1/3 pl-3">
+            <div class="items pl-3">
                 <h3 class="mb-5">Tipos</h3>
                 <ul class="h-40 overflow-y-auto">
                     <li v-for="item in pokemon.types" :key="item.name">
@@ -56,15 +56,30 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+
     .pageTitle{
         color: #f6bd20;
         font-size: 35px;
+        @media(max-width: 992px) {
+            font-size: 25px;
+        }
     }
+    .itemsContent{
+        @media(max-width: 992px) {
+            flex-direction: column;
+        }
 
-    .items{
+        .items{
         border-left: solid 2px #f6bd20;
+
+        width: 33%;
+        @media(max-width: 992px) {
+            width: 100%;
+        }
     }
+    }
+    
 
     h3{
         font-size: 20px;
