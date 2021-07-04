@@ -7,6 +7,9 @@
           <p>Altura: {{pokemon.height}}</p>
           <p>Peso: {{pokemon.weight}}</p>
         </div>
+        <div class="m-3">
+            <nuxt-link :to="`/pokemon/`+pokemon.id" class="btn btn-primary"> Mais detalhes </nuxt-link>
+        </div>
 
       </div>
 </template>
