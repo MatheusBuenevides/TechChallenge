@@ -7,10 +7,10 @@ Desafio técnico para a vaga de desenvolvedor front-end na Delivery Much
 
 Tecnocolias utilizadas no projeto
 
-- [Nuxt.JS] - Um framework para complementar o Vue.js.
-- [Vue.JS] - Framework javascript progressivo.
-- [TailWind CSS] - Helper css para um desenvolvimento mais ágil 
-- [Vercel] - Ferramenta para deploy automático do repositório
+- [Nuxt.JS](https://nuxtjs.org/) - Um framework para complementar o Vue.js.
+- [Vue.JS](https://vuejs.org/) - Framework javascript progressivo.
+- [TailWind CSS](https://tailwindcss.com/) - Helper css para um desenvolvimento mais ágil 
+- [Vercel](https://vercel.com/) - Ferramenta para deploy automático do repositório
 
 
 ## Instalação
