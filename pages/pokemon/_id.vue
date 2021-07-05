@@ -10,7 +10,7 @@
         </div>
         <div class="flex gap-10 itemsContent">
             <div class="items pl-3">
-                <h3 class="mb-5">Abilidades</h3>
+                <h3 class="mb-5">Habilidades</h3>
                 <ul>
                     <li v-for="item in pokemon.abilities" :key="item.name">
                         {{item.ability.name}}
