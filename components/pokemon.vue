@@ -18,6 +18,9 @@
     p{
         font-size: 18px;
     }    
+    .pagetitle{
+        text-transform: capitalize;
+    }
 </style>
 
 <script>
